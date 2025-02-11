@@ -20,7 +20,10 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
+    .addStyleEntry('styles/app', './assets/styles/app.scss')
+    .addStyleEntry('styles/roles', './assets/styles/roles.scss')
     .addEntry('app', './assets/app.js')
+    .addEntry('js/Role', './assets/js/Role.js')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
@@ -54,7 +57,11 @@ Encore
     })
 
     // enables Sass/SCSS support
-    //.enableSassLoader()
+    .enableSassLoader((options) => {
+        options.sassOptions = {
+            quietDeps: true, // disable warning msg
+        }
+    })
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
