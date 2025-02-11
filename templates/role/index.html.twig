@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Role Management{% endblock %}
+
+{% block body %}
+    <h2>Role Management</h2>
+    <h3>Roles</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>{{ "role name" | trans }}</th>
+            <th>{{ "actions" | trans }}</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <td colspan="2"></td>
+            <td class="actions"><button type="button" class="btn btn-success" data-js="add-btn" title="{{ "add new role" | trans }}"><i class="fas fa-circle-plus"></i></button></td>
+        </tr>
+        </tfoot>
+        {% if roles is not empty %}
+            <tbody>
+            {% for role in roles %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ role.name }}</td>
+                    <td class="actions">
+                        <button type="button"
+                                class="btn btn-success"
+                                title="{{ "role details" | trans }}"
+                                data-js="detail-btn"
+                                data-id="{{ role.id }}"><i class="fas fa-magnifying-glass"></i></button>
+                        <button type="button"
+                                class="btn btn-success"
+                                title="{{ "edit role" | trans }}"
+                                data-js="edit-btn"
+                                data-id="{{ role.id }}"><i class="fas fa-pencil"></i></button>
+                        <button type="button"
+                                class="btn btn-success"
+                                title="{{ "delete role" | trans }}"
+                                data-js="delete-btn"
+                                data-id="{{ role.id }}"><i class="fas fa-circle-minus"></i></button>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        {% else %}
+            <tbody>
+            <tr>
+                <td>{{ "no entries yet" | trans }}</td>
+            </tr>
+            </tbody>
+        {% endif %}
+    </table>
+{% endblock %}
