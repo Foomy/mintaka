@@ -1,0 +1,14 @@
+<ul>
+    <li>{{ "nav.link.travel"|trans }}</li>
+    <li>{{ "nav.link.bank"|trans }}</li>
+    <li>{{ "nav.link.market"|trans }}</li>
+    {% if plantationLocation %}
+        <li>{{ "nav.link.plantation"|trans }}</li>
+        <li>{{ "nav.link.workers"|trans }}</li>
+    {% else %}
+        <li>{{ "nav.link.auction"|trans }}</li>
+        <li>{{ "nav.link.collection"|trans }}</li>
+    {% endif %}
+    <li>{{ "nav.link.overview"|trans }}</li>
+</ul>
+

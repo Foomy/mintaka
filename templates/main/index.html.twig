@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <div class="player-location">
+        {{ player.name }} in {{ player.location }}
+    </div>
+    <div class="player-bank-balance">
+        {{ player.bankBalance }} {{ currency }}
+    </div>
+{% endblock %}
