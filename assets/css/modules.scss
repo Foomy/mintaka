@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+.player-row {
+    display: flex;
+    flex-direction: row;
+
+    & .player-location {
+        border: double 10px #00b100;
+        padding: 5px;
+    }
+
+    & .player-bank-balance {
+        border: double 10px #00b100;
+        margin: 0 0 0 10px;
+        padding: 5px;
+    }
+}
+
+.date-plantations-row {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 0 0;
+
+    & .ingame-date {
+        border: double 10px #00b100;
+        padding: 5px;
+    }
+
+    & .plantations {
+        border: double 10px #00b100;
+        margin: 0 0 0 10px;
+        padding: 5px;
+    }
+}
+
+.auctions-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: absolute;
+    bottom: 250px;
+
+    & .next-auction {
+        border: double 10px #00b100;
+        padding: 5px;
+    }
+}
+
+.navigation-row {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+    & nav.main {
+        border: double 10px #00b100;
+        margin: 0 0 0 10px;
+        width: 300px;
+
+        & .nav-item {
+            margin: 1px;
+            padding: 3px;
+            text-align: center;
+
+            & a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                color: white;
+                text-decoration: underline;
+            }
+        }
+
+        & .nav-item:hover {
+            background: #006700;
+        }
+    }
+}

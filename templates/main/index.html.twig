@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ player.name }} in {{ player.location }}{% endblock %}
+
+{% block body %}
+    <div class="main-view">
+        <div class="player-row">
+            <div class="player-location">
+                {{ player.name }} in {{ player.location }}
+            </div>
+            <div class="player-bank-balance">
+                {{ player.bankBalance }} {{ currency }}
+            </div>
+        </div>
+
+        <div class="date-plantations-row">
+            <div class="ingame-date">
+                {{ inGameDate|replace({' ': '<br>'})|raw }}
+            </div>
+            <div class="plantations">
+                Plant. 1: {{ plantation.size }} ha {{ plantation.crop }}
+            </div>
+        </div>
+
+        <div class="auctions-row">
+            <div class="next-auction">
+                {{ "next.auction.text"|trans }}<br>
+                {{ auction.date }} {{ auction.location }}
+            </div>
+        </div>
+
+        <div class="navigation-row">
+            {% include '_navigation-main.html.twig' %}
+        </div>
+    </div>
+{% endblock %}
