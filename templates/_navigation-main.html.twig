@@ -1,0 +1,29 @@
+<nav class="main">
+    <div class="nav-item">
+        <a href="" class="nav-link">{{ "nav.divnk.travel"|trans }}</a>
+    </div>
+    <div class="nav-item">
+        <a href="" class="nav-link">{{ "nav.divnk.bank"|trans }}</a>
+    </div>
+    <div class="nav-item">
+        <a href="" class="nav-link">{{ "nav.divnk.market"|trans }}</a>
+    </div>
+    {% if plantationLocation %}
+        <div class="nav-item">
+            <a href="" class="nav-link">{{ "nav.divnk.plantation"|trans }}</a>
+        </div>
+        <div class="nav-item">
+            <a href="" class="nav-link">{{ "nav.divnk.workers"|trans }}</a>
+        </div>
+    {% else %}
+        <div class="nav-item">
+            <a href="" class="nav-link">{{ "nav.divnk.auction"|trans }}</a>
+        </div>
+        <div class="nav-item">
+            <a href="" class="nav-link">{{ "nav.divnk.collection"|trans }}</a>
+        </div>
+    {% endif %}
+    <div class="nav-item">
+        <a href="" class="nav-link">{{ "nav.divnk.overview"|trans }}</a>
+    </div>
+</nav>
