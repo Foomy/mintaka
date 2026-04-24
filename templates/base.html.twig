@@ -17,6 +17,13 @@
     {% endblock %}
 </head>
 <body>
+<header>
+    <div class="user-ctrl-panel">
+        <a href="{{ path('users') }}">{{ "admin.user.link"|trans }}</a>
+        <a href="{{ path('login') }}">{{ "user.login.link"|trans }}</a>
+        <a href="{{ path('register') }}">{{ "user.register.link"|trans }}</a>
+    </div>
+</header>
 <div id="page-wrapper">
     {% block body %}{% endblock %}
 </div>
